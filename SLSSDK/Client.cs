@@ -510,8 +510,8 @@ namespace Aliyun.Api.LOG
                 _uriScheme = endpointUri.Scheme;
                 _port = endpointUri.Port;
             }
-            catch (Exception) {
-                throw new LogException("LogClientError", "client error happens");
+            catch (Exception ex) {
+                throw new LogException("LogClientError", "client error happens", ex);
             }
         }
 
